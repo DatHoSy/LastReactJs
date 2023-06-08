@@ -3,6 +3,8 @@ import styled from "styled-components";
 import bannerImg1 from 'assets/img/bannerImg1.svg';
 import bannerImg2 from 'assets/img/bannerImg2.svg';
 import bannerImg3 from 'assets/img/bannerImg3.svg';
+import { Banner3D } from "components/Banner3D";
+import { useMediaQuery } from "react-responsive";
 
 const StyleBanner = styled.div`
     height: 847px;
@@ -39,6 +41,7 @@ const StyleBanner = styled.div`
 `
 
 export const Banner = () => {
+    const isTablet = useMediaQuery({ query: '(max-width: 768px)' });
     return (
         <StyleBanner>
             <div className="bannner">
@@ -50,7 +53,11 @@ export const Banner = () => {
                     <p>you can explore ans shop many differnt collection from various barands here.</p>
                     <Button isIcon={true} text={'Shop Now'} bgColor={'black'} height={'72px'} width={'223px'} textColor={'white'} lHeight={'34px'} fSize={'29px'}></Button>
                 </div>
-                <img src={bannerImg2} alt="bannerPhoto" />
+                {
+                    isTablet ? <Banner3D></Banner3D> : <img src={bannerImg2} alt="bannerPhoto" />
+                }
+                
+                {/* <img src={bannerImg2} alt="bannerPhoto" /> */}
                 <img src={bannerImg3} alt="bannerPhoto" />
             </div>
         </StyleBanner>

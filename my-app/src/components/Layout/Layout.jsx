@@ -15,8 +15,39 @@ const StyleLayout = styled.div`
     align-items: center;
     gap: 100px;
     .banner3d {
-        /* width: 1320px; */
-        height: 500px;
+        flex-basis: 30%;
+        /* height: 500px; */
+    }
+
+    @media screen and (max-width: 1440px){
+        
+        // Brand 2
+        > div:nth-child(5) {
+            width: 1420;
+            > img:first-child {
+                width: 1420px;
+            }
+            > img:last-child {
+                width: 600px;
+            }
+        }
+        // FollowPro
+        > div:nth-child(7) {
+            width: 1440px;
+        }
+        // Footer
+         > div:nth-child(8) {
+            width: 1440px;
+            .infomation{
+                width: 1440px;
+            }
+            .copyRight {
+                width: 1440px;
+                div {
+                    width: 1400px;
+                }
+            }
+        }
     }
 
     @media screen and (max-width: 1024px){
@@ -210,6 +241,13 @@ const StyleLayout = styled.div`
         div.brand img {
             width: 135px;
         }
+
+        // Banner3D 
+        .banner3d {
+            height: 400px;
+            width: 248px;
+        }
+
         // pupolar
         > div:nth-child(3) {
             width: 750px;
@@ -306,8 +344,6 @@ const StyleLayout = styled.div`
                 }
             }
         }
-        
-
     }
 
     @media screen and (max-width: 425px){
@@ -413,7 +449,11 @@ const StyleLayout = styled.div`
                 height: 20px;
             }
         }
-
+        // Banner3D 
+        .banner3d {
+            height: 226px;
+            width: 130px;
+        }
         // brand
         div.brand {
             width: 412px;
@@ -560,7 +600,7 @@ export const Layout = () => {
     return (
         <StyleLayout>
             <Header width={WIDTH}></Header>
-            <Banner3D></Banner3D>
+            {/* <Banner3D></Banner3D> */}
             <Banner></Banner>
             <PopularPro width={WIDTH}></PopularPro>
             <GridPro width={WIDTH}></GridPro>

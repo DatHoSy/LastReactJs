@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as SearchIcon } from 'assets/img/searchIcon.svg';
+import { ReactComponent as Favorite } from 'assets/img/favorite.svg';
 import product1 from 'assets/img/product1.svg';
 import product2 from 'assets/img/product2.svg';
 import product3 from 'assets/img/product3.svg';
@@ -115,7 +116,7 @@ export const CardPro = ({ imgNumber, title, category, price, priceSale, isHot, p
                     :
                     <div className="addToCart">
                         <div>
-                            <SearchIcon />
+                            <Favorite />
                             <SearchIcon />
                         </div>
                         <div>
