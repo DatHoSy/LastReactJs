@@ -1,9 +1,9 @@
-import { Layout } from 'components/Layout/Layout';
 import './App.css';
+import HomePgae from 'containers/HomePage';
 
 function App() {
     return (
-        <Layout></Layout>
+        <HomePgae></HomePgae>
   );
 }
 

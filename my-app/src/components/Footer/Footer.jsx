@@ -16,7 +16,7 @@ const StyleFooter = styled.div`
         justify-content: space-between;
         width: ${props => props.width};
     }
-    .infomation > div {
+    .infomation > div:first-child {
         flex-basis: 25%;
     }
     .infoIndex {
